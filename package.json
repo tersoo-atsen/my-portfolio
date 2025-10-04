@@ -1,10 +1,10 @@
 {
   "scripts": {
-    "clear": "cd next && rm -rf .next && rm -rf cache",
-    "setup:next": "cd next && npm install --legacy-peer-deps",
-    "setup:strapi": "cd strapi && npm install",
-    "setup": "npm install && npm run setup:strapi && npm run setup:next",
-    "dev": "npm run clear && concurrently \"cd strapi && npm run develop\" \"cd next && npm run dev\""
+    "clear": "cd frontend && rm -rf .frontend && rm -rf cache",
+    "setup:frontend": "cd frontend && npm install --legacy-peer-deps",
+    "setup:backend": "cd backend && npm install",
+    "setup": "npm install && npm run setup:backend && npm run setup:frontend",
+    "dev": "npm run clear && concurrently \"cd backend && npm run develop\" \"cd frontend && npm run dev\""
   },
   "dependencies": {
     "concurrently": "^8.2.2",
